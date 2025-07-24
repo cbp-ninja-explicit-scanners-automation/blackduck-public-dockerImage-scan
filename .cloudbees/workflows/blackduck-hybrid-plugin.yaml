@@ -25,7 +25,7 @@ jobs:
           ref: main
           server-url: https://blackduck.saas-qa.beescloud.com
           api-token: ${{ secrets.BD_API_TOKEN }}
-          project-name: public-dockerimage-vulnerabilities-scan
+          project-name: blackduck-public-dockerImage-scan
           project-version: 0.0.1
           detect-cli-params:
                  --detect.docker.image=vulnerable/nginx:1.15
