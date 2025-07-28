@@ -28,5 +28,5 @@ jobs:
           project-name: blackduck-public-dockerImage-scan
           project-version: 0.0.1
           detect-cli-params:
-                 --detect.docker.image=nginx:1.15
+                 --detect.docker.image=nvsecurity/log4shell-vulnerable-app
                  --detect.tools=CONTAINER_SCAN
