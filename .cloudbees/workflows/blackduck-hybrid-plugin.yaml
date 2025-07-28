@@ -2,9 +2,9 @@ name: blackduck-hybrid-plugin
 kind: workflow
 apiVersion: automation.cloudbees.io/v1alpha1
 on:
-  # push:
-  #   branches:
-  #     - blackduck-hybrid-plugin-test
+  push:
+    branches:
+      - main
   workflow_dispatch:
   # schedule:
   #   - cron: 0 9 * * *
