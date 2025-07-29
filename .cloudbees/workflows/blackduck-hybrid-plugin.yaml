@@ -17,8 +17,8 @@ jobs:
     steps:
       - name: Checkout source code
         uses: cloudbees-io/checkout@v1
-        # with:
-        #   ref: main
+        with:
+          repository: cbp-trivy-explicit-scan/trivy-docker-image-scan
       - name: Run Black Duck hybrid scan
         uses: cloudbees-io/blackduck-sca-scan-dependency@v2
         with:
@@ -26,7 +26,7 @@ jobs:
           server-url: https://blackduck.saas-qa.beescloud.com
           api-token: ${{ secrets.BD_API_TOKEN }}
           project-name: blackduck-public-dockerImage-scan
-          project-version: 0.0.1
+          project-version: 0.0.2
           detect-cli-params:
-                 --detect.docker.image=nvsecurity/vulnerable-docker-compose
                  --detect.tools=CONTAINER_SCAN
+                 --detect.container.scan.file.path=./nginx.tar
