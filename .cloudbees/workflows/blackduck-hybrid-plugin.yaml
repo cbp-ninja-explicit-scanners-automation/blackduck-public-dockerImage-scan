@@ -16,7 +16,7 @@ jobs:
       - name: Checkout source code
         uses: cloudbees-io/checkout@v1
         with:
-          repository: cbp-trivy-explicit-scan/trivy-docker-image-scan
+          repository: cbp-trivy-explicit-scan/trivy-publicDockerImage-scan-nginx
       - name: Run Black Duck hybrid scan
         uses: cloudbees-io/blackduck-sca-scan-dependency@v2
         with:
