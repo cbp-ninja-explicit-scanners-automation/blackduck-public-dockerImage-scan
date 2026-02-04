@@ -24,6 +24,6 @@ jobs:
           api-token: ${{ secrets.BD_API_TOKEN }}
           project-name: blackduck-public-dockerImage-scan
           project-version: 0.0.1
-          detect-cli-params:
-                 --detect.tools=CONTAINER_SCAN
-                 --detect.container.scan.file.path=./nginx.tar
+          # detect-cli-params:
+          #        --detect.tools=CONTAINER_SCAN
+          #        --detect.container.scan.file.path=./nginx.tar
