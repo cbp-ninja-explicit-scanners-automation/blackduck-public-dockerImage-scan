@@ -25,5 +25,5 @@ jobs:
           project-name: blackduck-public-dockerImage-scan
           project-version: 0.0.1
           detect-cli-params:
-                 --detect.container.scan.file.path=/cloudbees/workspace/podman-image.tar
                  --detect.tools=CONTAINER_SCAN
+                 --detect.container.scan.file.path=./nginx.tar
