@@ -3,8 +3,6 @@ kind: workflow
 apiVersion: automation.cloudbees.io/v1alpha1
 on:
   workflow_dispatch:
-  schedule:
-    - cron: 35 19 * * 1-5
 permissions:
   scm-token-own: read
   scm-token-org: read
@@ -24,6 +22,4 @@ jobs:
           api-token: ${{ secrets.BD_API_TOKEN }}
           project-name: blackduck-public-dockerImage-scan-1
           project-version: 0.0.1
-          detect-cli-params:
-                 --detect.tools=CONTAINER_SCAN
-                 --detect.container.scan.file.path=./nginx.tar
+          detect-cli-params: --detect.tools=CONTAINER_SCAN --detect.container.scan.file.path=./nginx.tar
